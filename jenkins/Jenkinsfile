@@ -18,8 +18,11 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'dir scripts' // List contents of the scripts directory
-                bat 'scripts/deliver.bat'
+                // Confirm the scripts directory exists and list its contents
+                bat 'dir scripts'
+                
+                // Execute the deliver.bat script
+                bat 'scripts\\deliver.bat' // Use backslash for Windows paths
             }
         }
     }
