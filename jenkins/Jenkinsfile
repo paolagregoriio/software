@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'scripts\\deliver.bat' // Asegúrate de que el script sea compatible con Windows (usa .bat o .cmd)
+                bat '/scripts/deliver.bat' // Asegúrate de que el script sea compatible con Windows (usa .bat o .cmd)
             }
         }
     }
